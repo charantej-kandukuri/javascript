@@ -1,3 +1,9 @@
+# ESM
+## Source:
+https://javascript.info/import-export#export-default
+
+---
+
 # Default export
 When we export a function with `default` keyword, we can import it without curly braces and with any name.
 
