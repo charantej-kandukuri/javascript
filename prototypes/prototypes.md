@@ -41,7 +41,7 @@ valueOf
 
 **What are these extra properties, and where do they come from?**
 
-Every object in JavaScript has a built-in property, which is called its **prototype**
+Every object in JavaScript has a built-in property, which is called its **prototype**.
 
 The prototype is itself an object, so the prototypes will have its own prototype, making whats called a **prototype chain**.
 

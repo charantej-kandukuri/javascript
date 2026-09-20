@@ -1,15 +1,17 @@
-const personPrototype = {
-    greet() {
-        console.log(`hello, my name is ${this.name}!`)
+// Excercise
+
+// sum(1,2,3,4) => 10
+
+// able to accept an array and able to return same result
+
+function sum(...rest) {
+
+    if(Array.isArray(rest[0])) {
+        rest = [...rest[0]]
     }
+    
+    const result = rest.reduce((a, b) => a + b);
+    return result;
 }
 
-function Person(name) {
-    this.name = name;
-}
-
-
-const carl = new Person("Carl");
-
-console.log(Object.hasOwn(carl, "name")); // true
-console.log(Object.hasOwn(carl, "greet")); // false
+console.log(sum([1,2,3,4]))
