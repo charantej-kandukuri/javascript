@@ -1,17 +1,16 @@
-// Excercise
-
-// sum(1,2,3,4) => 10
-
-// able to accept an array and able to return same result
-
-function sum(...rest) {
-
-    if(Array.isArray(rest[0])) {
-        rest = [...rest[0]]
+function add(a){
+    return function (b) {
+        return function (c) {
+            return a+b+c;
+        }
     }
-    
-    const result = rest.reduce((a, b) => a + b);
-    return result;
 }
 
-console.log(sum([1,2,3,4]))
+const bfn = add(1)
+const cfn = bfn(2)
+const result = cfn(3);
+
+// (OR)
+const result = add(1)(2)(3);
+
+console.log({result}) // { result: 6 }

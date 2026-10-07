@@ -1,4 +1,4 @@
-# Debugging (Source: Deepseak)
+# Debugging (Source: Deepseakk)
 
 ## Async operations handled by OS Kernal
 - I/O (HTTP requests, TCP Sockets, DB Connections over network)
