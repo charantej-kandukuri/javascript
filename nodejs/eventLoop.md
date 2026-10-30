@@ -3,7 +3,7 @@
 ## What is the Event Loop?
 The event loop is what allow nodejs to perform non-blocking I/O operations -- despite the fact that single JavaScript thread is used by default -- by offloading the operations to the system kernal whenever possible.
 
-Since most modern kernals are multi-threaded, they can handle multiple operations executing in the background. When one of these operation complertes, kernal tells Node.js so that the appropriate callback may be added to the poll queue to eventually be executed.
+Since most modern kernals are multi-threaded, they can handle multiple operations executing in the background. When one of these operation completes, kernal tells Node.js so that the appropriate callback may be added to the poll queue to eventually be executed.
 
 ## Event Loop Phases
 Each phase has a FIFO queue of callbacks to execute. While each phase is special in its own way, generally when the event loop enters a given phase, it will perform any operations specific to that phase, then executes callbacks in that phase until the queue has been exhausted or the maximum number of callbacks has executed. When the queue has been exhausted or  callbacks limit reached, the event loop move to the next phase, and so on.
